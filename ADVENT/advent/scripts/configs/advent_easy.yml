@@ -1,0 +1,35 @@
+SOURCE: PotsdamIRRG
+TARGET: Vaihingen
+#---REVERSE---
+#SOURCE: Vaihingen
+#TARGET: PotsdamIRRG
+
+DATA_LIST_TARGET: /root/code/CCDA_LGFA/entropy_maps/easy_split.txt
+
+NUM_WORKERS: 8
+GPU_ID: 6
+EXP_NAME: 'reproduce_PotsIRRG_Vaih_EL'
+
+TRAIN:
+  DA_METHOD: AdvEnt
+  MODEL: DeepLabv2
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/PotsIRRG_source_model_13000.pth
+  # Models in different stages:
+  # /root/code/CCDA_LGFA/ADVENT/PotsIRRG_source_model_13000.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_800.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
+
+
+  #--REVERSE--
+  # Models in different stages:
+  #/root/code/CCDA_LGFA/ADVENT/on_vaih_model_13000.pth
+
+  MULTI_LEVEL: False
+  LAMBDA_SEG_MAIN: 1.0
+  LAMBDA_SEG_AUX: 0.1
+  LAMBDA_SEG_LOW: 0.1
+  LAMBDA_ADV_MAIN: 0.1
+  LAMBDA_ADV_AUX: 0.1
+  LAMBDA_ADV_LOW: 0.1
+TEST:
+  MODE: best

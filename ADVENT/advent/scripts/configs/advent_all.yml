@@ -1,0 +1,26 @@
+SOURCE: PotsdamIRRG
+TARGET: Vaihingen
+#---REVERSE---
+#SOURCE: Vaihingen
+#TARGET: PotsdamIRRG
+
+NUM_WORKERS: 8
+GPU_ID: 1
+EXP_NAME: 'reproduce_PotsIRRG_Vaih'
+
+TRAIN:
+  DA_METHOD: AdvEnt
+  MODEL: DeepLabv2
+  RESTORE_FROM: /root/code/CCDA_LFGA/PotsIRRG_source_model_13000.pth
+  #--REVERSE--
+  #/root/code/CCA-LGFA/on_vaih_model_13000.pth
+
+  MULTI_LEVEL: False
+  LAMBDA_SEG_MAIN: 1.0
+  LAMBDA_SEG_AUX: 0.1
+  LAMBDA_SEG_LOW: 0.1
+  LAMBDA_ADV_MAIN: 0.1
+  LAMBDA_ADV_AUX: 0.1
+  LAMBDA_ADV_LOW: 0.1
+TEST:
+  MODE: best

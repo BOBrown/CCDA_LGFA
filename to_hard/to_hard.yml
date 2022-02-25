@@ -1,0 +1,36 @@
+# NEED TO CHANGE
+SOURCE: VaihingenEasy
+TARGET: VaihingenHard
+#--REVERSE--
+# SOURCE: PotsdamEasy
+# TARGET: PotsdamHard
+
+DATA_LIST_TARGET: ../entropy_maps/hard_split.txt
+
+NUM_WORKERS: 8
+GPU_ID: 6
+EXP_NAME: 'reproduce_PotsIRRG_Vaih_Hard_EL'
+
+TRAIN:
+  INPUT_SIZE_SOURCE:
+    - 512
+    - 512
+  DA_METHOD: AdvEnt
+  MODEL: DeepLabv2
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
+
+  # Models in different stages:
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_Hard_FL/model_2900.pth
+
+  #--REVERSE--
+
+  MULTI_LEVEL: False
+  LAMBDA_SEG_MAIN: 1.0
+  LAMBDA_SEG_AUX: 0.1
+  LAMBDA_SEG_LOW: 0.1
+  LAMBDA_ADV_MAIN: 0.1
+  LAMBDA_ADV_AUX: 0.1
+  LAMBDA_ADV_LOW: 0.1
+TEST:
+  MODE: best
