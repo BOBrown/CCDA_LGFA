@@ -7,13 +7,20 @@
 </div> -->
 
 <div align="center">
-  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper]</a></h4>
+  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper] IEEE Link</a></h4>
+</div>
+
+<div align="center">
+  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper] ArXiv Link</a></h4>
 </div>
 
 <div align="center">
   <img src="./figure/2.png" width=800>
 </div>
 
+
+ <br><br/>
+ 
 If you find our code or paper useful to your research work, please consider citing our work using the following bibtex:
 ```
 @article{zhang2021curriculum,
@@ -57,7 +64,7 @@ Note that the train/val split way has been saved in path: /CCDA_LGFA/ADVENT/adve
 
 We give an example of PotsdamIRRG->Vaihingen adaptation direction, and the other adaptation direction (e.g., Vaihingen->PotsdamIRRG) can be easily implemented by modifying the code
 
-We provide a two-stage curriculum adaptation strategy for addressing the negative transfer issue within the target patches as follows:
+We provide a **two-stage curriculum adaptation strategy** for addressing the negative transfer issue within the target patches as follows:
 
 ## Before curriculum adaptation
 - When the source-domain pretrained model is available, we can utilize this model to calculate the entropy scores of all target patches (or samples) as follows:
@@ -164,7 +171,7 @@ python test_patch_wise.py --status 1 --cfg /root/code/CCDA_LGFA/to_hard/to_hard.
 ```
 
 ## Selected cross-domain semantic segmentation results
-Here we report some performance comparisons from our paper on PotsdamIRRG and Vaihingen
+Here we report some performance comparisons from our paper on PotsdamIRRG, PotsdamIRRG, and Vaihingen
 
 <div align="center">
   <img src="./figure/table_1.png" width=800>
