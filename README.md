@@ -62,7 +62,7 @@ Note that the train/val split way has been saved in path: /CCDA_LGFA/ADVENT/adve
 - PotsdamIRRG pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1JU3ZJmjwRJpUP5JuJhUNrGqKnovOGxSE/view?usp=sharing)\]
 - Vaihingen pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1fNm60XPvDyBJZ297TPEDmd1byaIQwmwd/view?usp=sharing)\]
 
-We give an example of PotsdamIRRG->Vaihingen adaptation direction, and the other adaptation direction (e.g., Vaihingen->PotsdamIRRG) can be easily implemented by modifying the code
+We give an example of **PotsdamIRRG->Vaihingen adaptation direction**, and the other adaptation direction (e.g., Vaihingen->PotsdamIRRG) can be easily implemented by modifying the code
 
 We provide a **two-stage curriculum adaptation strategy** for addressing the negative transfer issue within the target patches as follows:
 
@@ -137,8 +137,8 @@ vim train_and_pseudo_r_0.5.txt, where this file contains all lines of both train
 ``` 
 
 4. Change the "cfg.TRAIN.SET_SOURCE" to 'train_and_pseudo_r_0.5' in /CCDA_LGFA/ADVENT/advent/domain_adaptation/config.py
-5. Copy all easy-to-adapt images to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/images according to the easy_split.txt
-6. Copy pseudo-labels of easy-to-adapt images (which saved in /CCDA_LGFA/entropy_maps/color_masks/) to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/labels/
+5. Copy all easy-to-adapt images to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/images, according to the easy_split.txt
+6. Copy pseudo-labels of easy-to-adapt images (which saved in /CCDA_LGFA/entropy_maps/color_masks/) to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/labels/ , according to the easy_split.txt
 
 
 ## Hard-to-adapt Training
