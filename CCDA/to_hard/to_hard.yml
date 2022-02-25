@@ -5,7 +5,7 @@ TARGET: VaihingenHard
 # SOURCE: PotsdamEasy
 # TARGET: PotsdamHard
 
-DATA_LIST_TARGET: ../entropy_maps/hard_split.txt
+DATA_LIST_TARGET: ../hard_split.txt
 
 NUM_WORKERS: 8
 GPU_ID: 6

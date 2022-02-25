@@ -15,7 +15,7 @@
 </div>
 
 <div align="center">
-  <img src="./figure/2.png" width=800>
+  <img src="./figs_tabs/2.png" width=800>
 </div>
 
 
@@ -79,7 +79,7 @@ pip install -e .
 
 2. generate the easy/hard patches according to the source-domain pretrained model
 ```
-cd /CCDA_LGFA/entropy_maps/ 
+cd /CCDA_LGFA/CCDA/ 
 python entropy.py --lambda1 0.5
 ``` 
 
@@ -126,7 +126,7 @@ cfg.TRAIN.BATCH_SIZE_TARGET = 1
 
 2. generate the easy/hard patches according to the SL-Adapted-Baseline model
 ```
-cd /CCDA_LGFA/entropy_maps/ 
+cd /CCDA_LGFA/CCDA/ 
 Replace the "restore_from" in entropy.py using the best model in the above stage
 python entropy.py --lambda1 0.5
 ``` 
@@ -138,7 +138,7 @@ vim train_and_pseudo_r_0.5.txt, where this file contains all lines of both train
 
 4. Change the "cfg.TRAIN.SET_SOURCE" to 'train_and_pseudo_r_0.5' in /CCDA_LGFA/ADVENT/advent/domain_adaptation/config.py
 5. Copy all easy-to-adapt images to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/images, according to the easy_split.txt
-6. Copy pseudo-labels of easy-to-adapt images (which saved in /CCDA_LGFA/entropy_maps/color_masks/) to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/labels/ , according to the easy_split.txt
+6. Copy pseudo-labels of easy-to-adapt images (which saved in /CCDA_LGFA/CCDA/color_masks/) to /CCDA_LGFA/ADVENT/data/PotsdamIRRG/labels/ , according to the easy_split.txt
 
 
 ## Hard-to-adapt Training
@@ -150,39 +150,39 @@ cfg.TRAIN.BATCH_SIZE_TARGET = 4
 ```
 1. Training in feature-level adaptation in Stage two
 ```
-cd /CCDA_LGFA/to_hard/
+cd /CCDA_LGFA/CCDA/to_hard/
 ```
 ```
-python train_patch_wise_hard.py --status 0 --cfg /root/code/CCDA_LGFA/to_hard/to_hard.yml # path for to_hard.yml
+python train_patch_wise_hard.py --status 0 --cfg /root/code/CCDA_LGFA/CCDA/to_hard/to_hard.yml # path for to_hard.yml
 ```
 
 2. Evaluation in feature-level adaptation in Stage two
 ```
-python test_patch_wise.py --status 0 --cfg /root/code/CCDA_LGFA/to_hard/to_hard.yml # path for to_hard.yml
+python test_patch_wise.py --status 0 --cfg /root/code/CCDA_LGFA/CCDA/to_hard/to_hard.yml # path for to_hard.yml
 ```
 3. Change EXP_NAME and RESTORE_FROM (using the best model in the above stage) in to_hard.yml, and training in entropy-level adaptation in Stage two:
 ```
-python train_patch_wise_hard.py --status 1 --cfg /root/code/CCDA_LGFA/to_hard/to_hard.yml # path for to_hard.yml
+python train_patch_wise_hard.py --status 1 --cfg /root/code/CCDA_LGFA/CCDA/to_hard/to_hard.yml # path for to_hard.yml
 ```
 
 4. Evaluation in entropy-level adaptation in Stage two
 ```
-python test_patch_wise.py --status 1 --cfg /root/code/CCDA_LGFA/to_hard/to_hard.yml # path for to_hard.yml
+python test_patch_wise.py --status 1 --cfg /root/code/CCDA_LGFA/CCDA/to_hard/to_hard.yml # path for to_hard.yml
 ```
 
 ## Selected cross-domain semantic segmentation results
 Here we report some performance comparisons from our paper on PotsdamIRRG, PotsdamIRRG, and Vaihingen
 
 <div align="center">
-  <img src="./figure/table_1.png" width=800>
+  <img src="./figs_tabs/table_1.png" width=800>
 </div>
 
 <div align="center">
-  <img src="./figure/table_2.png" width=800>
+  <img src="./figs_tabs/table_2.png" width=800>
 </div>
 
 <div align="center">
-  <img src="./figure/table_3.png" width=800>
+  <img src="./figs_tabs/table_3.png" width=800>
 </div>
 
 ## Contact

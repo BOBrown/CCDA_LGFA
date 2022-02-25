@@ -4,7 +4,7 @@ TARGET: Vaihingen
 #SOURCE: Vaihingen
 #TARGET: PotsdamIRRG
 
-DATA_LIST_TARGET: /root/code/CCDA_LGFA/entropy_maps/easy_split.txt
+DATA_LIST_TARGET: /root/code/CCDA_LGFA/CCDA/easy_split.txt
 
 NUM_WORKERS: 8
 GPU_ID: 6
