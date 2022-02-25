@@ -25,7 +25,7 @@ from advent.domain_adaptation.config import cfg, cfg_from_file
 warnings.filterwarnings("ignore", message="numpy.dtype size changed")
 warnings.filterwarnings("ignore")
 
-a
+
 def get_arguments():
     """
     Parse input arguments
