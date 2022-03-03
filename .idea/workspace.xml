@@ -3,16 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="6a6f2867-89ca-4e58-a4d5-cd2f66f4f47e" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADVENT/advent/model/deeplabv2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_all.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_all.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml" beforeDir="false" afterPath="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADVENT/advent/scripts/test_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/ADVENT/advent/scripts/test_easy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ADVENT/advent/scripts/train_easy.py" beforeDir="false" afterPath="$PROJECT_DIR$/ADVENT/advent/scripts/train_easy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDA/entropy.py" beforeDir="false" afterPath="$PROJECT_DIR$/CCDA/entropy.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDA/to_hard/test_patch_wise.py" beforeDir="false" afterPath="$PROJECT_DIR$/CCDA/to_hard/test_patch_wise.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CCDA/to_hard/to_hard.yml" beforeDir="false" afterPath="$PROJECT_DIR$/CCDA/to_hard/to_hard.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CCDA/to_hard/train_patch_wise_hard.py" beforeDir="false" afterPath="$PROJECT_DIR$/CCDA/to_hard/train_patch_wise_hard.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -38,14 +30,14 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="md" value="1" />
-          <entry key="py" value="13" />
+          <entry key="py" value="14" />
           <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Markdown" value="1" />
-          <entry key="Python" value="13" />
+          <entry key="Python" value="14" />
           <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
@@ -53,14 +45,14 @@
         <counts>
           <entry key="md" value="15" />
           <entry key="py" value="159" />
-          <entry key="yml" value="649" />
+          <entry key="yml" value="948" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Markdown" value="15" />
           <entry key="Python" value="159" />
-          <entry key="YAML" value="649" />
+          <entry key="YAML" value="948" />
         </counts>
       </usages-collector>
     </session>
@@ -68,22 +60,22 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="162">
-                <caret line="138" column="46" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/ADVENT/advent/model/deeplabv3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
+            <state relative-caret-position="177">
+              <caret line="230" column="28" lean-forward="true" selection-start-line="230" selection-start-column="28" selection-end-line="230" selection-end-column="28" />
+              <folding>
+                <element signature="e#193#214#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -112,17 +104,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="89">
-              <caret line="19" column="95" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
+            <state relative-caret-position="8">
+              <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/test_easy.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2835">
-              <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
+            <state relative-caret-position="162">
+              <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
             </state>
           </provider>
         </entry>
@@ -130,8 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CCDA/to_hard/to_hard.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="27">
-              <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
+            <state relative-caret-position="81">
+              <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
             </state>
           </provider>
         </entry>
@@ -186,12 +178,12 @@
         <option value="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_all.yml" />
         <option value="$PROJECT_DIR$/CCDA/to_hard/train_patch_wise_hard.py" />
         <option value="$PROJECT_DIR$/CCDA/to_hard/test_patch_wise.py" />
-        <option value="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml" />
-        <option value="$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py" />
         <option value="$PROJECT_DIR$/CCDA/entropy.py" />
         <option value="$PROJECT_DIR$/README.md" />
-        <option value="$PROJECT_DIR$/CCDA/to_hard/to_hard.yml" />
         <option value="$PROJECT_DIR$/ADVENT/advent/domain_adaptation/eval_UDA_single_EL.py" />
+        <option value="$PROJECT_DIR$/CCDA/to_hard/to_hard.yml" />
+        <option value="$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml" />
+        <option value="$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py" />
       </list>
     </option>
   </component>
@@ -201,7 +193,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="2580" />
@@ -292,7 +284,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SegNet_Source" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../SegNet_Source/SegNet_Source" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
@@ -451,7 +443,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="-6" width="1293" height="773" extended-state="7" />
+    <frame x="-6" y="-6" width="1293" height="773" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" side_tool="true" />
@@ -514,16 +506,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ADVENT/advent/model/deeplabv3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="433" column="27" selection-start-line="433" selection-start-column="4" selection-end-line="433" selection-end-column="27" />
-          <folding>
-            <element signature="e#193#214#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_all.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -545,13 +527,6 @@
             <caret line="138" column="46" selection-start-line="138" selection-start-column="46" selection-end-line="138" selection-end-column="46" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="67" column="40" selection-start-line="67" selection-start-column="40" selection-end-line="67" selection-end-column="40" />
         </state>
       </provider>
     </entry>
@@ -579,20 +554,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="89">
-          <caret line="19" column="95" selection-start-line="19" selection-start-column="95" selection-end-line="19" selection-end-column="95" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CCDA/to_hard/to_hard.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="27">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CCDA/to_hard/test_patch_wise.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="146">
@@ -609,8 +570,39 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/test_easy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2835">
-          <caret line="117" column="15" selection-start-line="117" selection-start-column="15" selection-end-line="117" selection-end-column="15" />
+        <state relative-caret-position="162">
+          <caret line="18" column="62" lean-forward="true" selection-start-line="18" selection-start-column="62" selection-end-line="18" selection-end-column="62" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CCDA/to_hard/to_hard.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="81">
+          <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADVENT/advent/scripts/configs/advent_easy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8">
+          <caret line="19" column="34" selection-start-line="19" selection-start-column="34" selection-end-line="19" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADVENT/advent/domain_adaptation/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="25" column="15" lean-forward="true" selection-start-line="25" selection-start-column="15" selection-end-line="25" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ADVENT/advent/model/deeplabv3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="177">
+          <caret line="230" column="28" lean-forward="true" selection-start-line="230" selection-start-column="28" selection-end-line="230" selection-end-column="28" />
+          <folding>
+            <element signature="e#193#214#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

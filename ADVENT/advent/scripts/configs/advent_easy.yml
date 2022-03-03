@@ -8,12 +8,12 @@ DATA_LIST_TARGET: /root/code/CCDA_LGFA/CCDA/easy_split.txt
 
 NUM_WORKERS: 8
 GPU_ID: 0
-EXP_NAME: 'reproduce_PotsIRRG_Vaih_EL'
-
+EXP_NAME: 'reproduce_PotsIRRG_Vaih_FL' #FL represents the Feature-Level Adaptation
+                                        #EL represents the Entropy-Level Adaptation
 TRAIN:
   DA_METHOD: AdvEnt
   MODEL: DeepLabv3
-  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_1800.pth
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/pretrained_models/PotsIRRG_source_model.pth
   # Models in different stages:
   # /root/code/CCDA_LGFA/ADVENT/pretrained_models/PotsIRRG_source_model.pth
   # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_1800.pth

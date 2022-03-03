@@ -9,7 +9,7 @@ DATA_LIST_TARGET: ../hard_split.txt
 
 NUM_WORKERS: 8
 GPU_ID: 0
-EXP_NAME: 'reproduce_PotsIRRG_Vaih_Hard_EL'
+EXP_NAME: 'reproduce_PotsIRRG_Vaih_Hard_FL'  #FL represents the Feature-Level Adaptation
 
 TRAIN:
   INPUT_SIZE_SOURCE:
@@ -17,7 +17,7 @@ TRAIN:
     - 512
   DA_METHOD: AdvEnt
   MODEL: DeepLabv3
-  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_Hard_FL/model_2800.pth
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_2700.pth
 
   # Models in different stages:
   # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_2700.pth

@@ -59,7 +59,7 @@ cfg.GPU_ID = 2
 
 # TRAIN CONFIGS
 cfg.TRAIN = EasyDict()
-cfg.TRAIN.SET_SOURCE = 'train_and_pseudo_r_0.5' # train.txt for stage-one;  train_and_pseudo_r_0.5.txt for stage-two
+cfg.TRAIN.SET_SOURCE = 'train' # train.txt for stage-one;  train_and_pseudo_r_0.5.txt for stage-two
 cfg.TRAIN.SET_TARGET = 'train'
 cfg.TRAIN.BATCH_SIZE_SOURCE = 4 # NEED TO CHANGE; 4 for training; 1 for entropy calculation
 cfg.TRAIN.BATCH_SIZE_TARGET = 4 # NEED TO CHANGE; 4 for training; 1 for entropy calculation
