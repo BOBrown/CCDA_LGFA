@@ -41,14 +41,14 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="md" value="179" />
+          <entry key="md" value="433" />
           <entry key="py" value="159" />
           <entry key="yml" value="948" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="179" />
+          <entry key="Markdown" value="433" />
           <entry key="Python" value="159" />
           <entry key="YAML" value="948" />
         </counts>
@@ -61,8 +61,8 @@
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="216">
-                <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+              <first_editor relative-caret-position="189">
+                <caret line="64" column="175" selection-start-line="64" selection-start-column="175" selection-end-line="64" selection-end-column="175" />
               </first_editor>
               <second_editor />
             </state>
@@ -191,7 +191,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="2580" />
@@ -456,7 +456,7 @@
       <window_info anchor="bottom" id="File Transfer" weight="0.32890856" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4726989" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.47113883" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4227769" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -597,8 +597,8 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="216">
-            <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
+          <first_editor relative-caret-position="189">
+            <caret line="64" column="175" selection-start-line="64" selection-start-column="175" selection-end-line="64" selection-end-column="175" />
           </first_editor>
           <second_editor />
         </state>
