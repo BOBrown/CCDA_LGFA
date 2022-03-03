@@ -62,7 +62,7 @@ Note that the train/val split way has been saved in path: /CCDA_LGFA/ADVENT/adve
 - PotsdamIRRG pretrained weights \[[Weights Page](https://drive.google.com/file/d/1d-3dmNgP_syR8yXh_Q2bnahh1hODCUiR/view?usp=sharing)\]
 - Vaihingen pretrained weights \[[Weights Page](https://drive.google.com/file/d/1uiyEOaAcZTRRNdvS6o86H2N3TGBrBf_E/view?usp=sharing)\]
 
-## Also, you can train from ImageNet pretrained model to obtain the above source-domain model at: \[[Source-domain Training Code Page](https://github.com/BOBrown/SegNet_Source)\]
+## Also, you can train from ImageNet-pretrained model to obtain the above source-domain model at: \[[Source-domain Training Code](https://github.com/BOBrown/SegNet_Source)\]
 
 We give an example of **PotsdamIRRG->Vaihingen adaptation direction**, and the other adaptation direction (e.g., Vaihingen->PotsdamIRRG) can be easily implemented by modifying the code
 
