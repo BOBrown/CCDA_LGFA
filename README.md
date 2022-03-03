@@ -59,8 +59,8 @@ unzip data.zip
 Note that the train/val split way has been saved in path: /CCDA_LGFA/ADVENT/advent/dataset/.
 
 ## Dowloading the source-domain pretrained model
-- PotsdamIRRG pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1JU3ZJmjwRJpUP5JuJhUNrGqKnovOGxSE/view?usp=sharing)\]
-- Vaihingen pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1fNm60XPvDyBJZ297TPEDmd1byaIQwmwd/view?usp=sharing)\]
+- PotsdamIRRG pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1d-3dmNgP_syR8yXh_Q2bnahh1hODCUiR/view?usp=sharing)\]
+- Vaihingen pretrained weights \[[Dataset Page](https://drive.google.com/file/d/1uiyEOaAcZTRRNdvS6o86H2N3TGBrBf_E/view?usp=sharing)\]
 
 We give an example of **PotsdamIRRG->Vaihingen adaptation direction**, and the other adaptation direction (e.g., Vaihingen->PotsdamIRRG) can be easily implemented by modifying the code
 
