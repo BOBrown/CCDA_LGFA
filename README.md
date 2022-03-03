@@ -131,7 +131,7 @@ Replace the "restore_from" in entropy.py using the best model in the above stage
 python entropy.py --lambda1 0.5
 ``` 
 
-3. cd /CCDA_LGFA/ADVENT/advent/dataset/PotsdamIRRG/ and create the train_and_pseudo_r_0.5.txt file of pseudo-labeled target samples and labeled source samples as follows:
+3. cd /CCDA_LGFA/ADVENT/advent/dataset/PotsdamIRRG/ and create the train_and_pseudo_r_0.5.txt file containing both pseudo-labeled target samples and labeled source samples as follows:
 ```
 vim train_and_pseudo_r_0.5.txt, where this file contains all lines of both train.txt (PotsdamIRRG) and easy_split.txt (Vaihingen)
 ``` 

@@ -8,7 +8,7 @@ TARGET: VaihingenHard
 DATA_LIST_TARGET: ../hard_split.txt
 
 NUM_WORKERS: 8
-GPU_ID: 6
+GPU_ID: 0
 EXP_NAME: 'reproduce_PotsIRRG_Vaih_Hard_EL'
 
 TRAIN:
@@ -16,12 +16,12 @@ TRAIN:
     - 512
     - 512
   DA_METHOD: AdvEnt
-  MODEL: DeepLabv2
-  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
+  MODEL: DeepLabv3
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_Hard_FL/model_2800.pth
 
   # Models in different stages:
-  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
-  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_Hard_FL/model_2900.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_2700.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_Hard_FL/model_2800.pth
 
   #--REVERSE--
 

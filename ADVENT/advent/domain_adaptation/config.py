@@ -59,10 +59,10 @@ cfg.GPU_ID = 2
 
 # TRAIN CONFIGS
 cfg.TRAIN = EasyDict()
-cfg.TRAIN.SET_SOURCE = 'train' # train.txt for stage-one;  train_and_pseudo_r_0.5.txt for stage-two
+cfg.TRAIN.SET_SOURCE = 'train_and_pseudo_r_0.5' # train.txt for stage-one;  train_and_pseudo_r_0.5.txt for stage-two
 cfg.TRAIN.SET_TARGET = 'train'
-cfg.TRAIN.BATCH_SIZE_SOURCE = 4 # Bo Zhang: NEED TO CHANGE; 4 for training; 1 for entropy calculation
-cfg.TRAIN.BATCH_SIZE_TARGET = 4 # Bo Zhang: NEED TO CHANGE; 4 for training; 1 for entropy calculation
+cfg.TRAIN.BATCH_SIZE_SOURCE = 4 # NEED TO CHANGE; 4 for training; 1 for entropy calculation
+cfg.TRAIN.BATCH_SIZE_TARGET = 4 # NEED TO CHANGE; 4 for training; 1 for entropy calculation
 cfg.TRAIN.IGNORE_LABEL = 255
 cfg.TRAIN.INPUT_SIZE_SOURCE = (512, 512)
 cfg.TRAIN.INPUT_SIZE_TARGET = (512, 512)
@@ -70,7 +70,7 @@ cfg.TRAIN.INPUT_SIZE_TARGET = (512, 512)
 cfg.TRAIN.INFO_SOURCE = ''
 cfg.TRAIN.INFO_TARGET = str(project_root / 'advent/dataset/Vaihingen/info.json')
 # Segmentation network params
-cfg.TRAIN.MODEL = 'DeepLabv2'
+cfg.TRAIN.MODEL = 'DeepLabv3'
 cfg.TRAIN.MULTI_LEVEL = False
 cfg.TRAIN.RESTORE_FROM = ''
 
@@ -91,7 +91,7 @@ cfg.TRAIN.IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=
 cfg.TRAIN.IMG_MEAN_V = np.array((80.672294, 81.249737, 119.997608), dtype=np.float32)
 cfg.TRAIN.IMG_MEAN_PR = np.array((86.099505, 92.735321, 86.761490), dtype=np.float32)
 cfg.TRAIN.IMG_MEAN_PIR = np.array((86.099505, 92.735321, 97.835882), dtype=np.float32)
-cfg.TRAIN.LEARNING_RATE = 2.5e-4 # Bo Zhang: NEED TO CHANGE; 2.5e-4 for deeplab;
+cfg.TRAIN.LEARNING_RATE = 2.5e-4 # NEED TO CHANGE; 2.5e-4 for deeplab;
 cfg.TRAIN.MOMENTUM = 0.9
 cfg.TRAIN.WEIGHT_DECAY = 0.0005
 cfg.TRAIN.POWER = 0.9  # learning rate decay
@@ -122,7 +122,7 @@ cfg.TRAIN.TENSORBOARD_VIZRATE = 50
 cfg.TEST = EasyDict()
 cfg.TEST.MODE = 'best'  # {'single', 'best'}
 # model
-cfg.TEST.MODEL = ('DeepLabv2',)  # Bo Zhang:NEED TO CHANGE DeepLabv2
+cfg.TEST.MODEL = ('DeepLabv3',)  # NEED TO CHANGE DeepLabv3
 cfg.TEST.MODEL_WEIGHT = (1.0,)
 cfg.TEST.MULTI_LEVEL = (False,)
 cfg.TEST.IMG_MEAN = np.array((104.00698793, 116.66876762, 122.67891434), dtype=np.float32)

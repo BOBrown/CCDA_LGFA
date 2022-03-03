@@ -18,8 +18,8 @@ import numpy as np
 from PIL import Image
 from torch import nn
 from torch.utils import data
-from advent.model.deeplabv2 import \
-    get_deeplab_v2_EL_Adapt as get_deeplab_v2
+from advent.model.deeplabv3 import \
+    get_deeplab_v3_EL_Adapt as get_deeplab_v3
 
 from advent.model.discriminator import get_fc_discriminator
 
@@ -180,9 +180,9 @@ def main(args):
     cfg.TEST.SNAPSHOT_DIR[0] = osp.join(cfg.EXP_ROOT_SNAPSHOT, cfg.EXP_NAME)
 
     # load model with parameters trained from pretrained models, e.g., source-domain pretained models or easy-to-adapted models
-    model_gen = get_deeplab_v2(num_classes=cfg.NUM_CLASSES, multi_level=cfg.TEST.MULTI_LEVEL) # Need to change
-    restore_from = "/root/code/CCDA_LGFA/ADVENT/PotsIRRG_source_model_13000.pth" # Please change this path for your reproduction
-    #restore_from = "/root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth" # Stage-two SL-Adapted-Baseline, please change this path for your reproduction
+    model_gen = get_deeplab_v3(num_classes=cfg.NUM_CLASSES, multi_level=cfg.TEST.MULTI_LEVEL) # Need to change
+    restore_from = "/root/code/CCDA_LGFA/ADVENT/pretrained_models/PotsIRRG_source_model.pth" # Please change this path for your reproduction
+    #restore_from = "/root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_2700.pth" # Stage-two SL-Adapted-Baseline, please change this path for your reproduction
 
     print("Loading the generator:", restore_from)
     load_checkpoint_for_evaluation(model_gen, restore_from, device)

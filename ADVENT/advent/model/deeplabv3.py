@@ -6,6 +6,7 @@
 # --------------------------------------------------------
 
 import torch.nn as nn
+import torch.nn.functional as F
 
 affine_par = True
 
@@ -71,6 +72,32 @@ class ClassifierModule(nn.Module):
             out += self.conv2d_list[i + 1](x)
         return out
 
+class ClassifierModule_GAP(nn.Module):
+    def __init__(self, inplanes, dilation_series, padding_series, num_classes):
+        super(ClassifierModule_GAP, self).__init__()
+        self.conv2d_list = nn.ModuleList()
+        for dilation, padding in zip(dilation_series, padding_series):
+            self.conv2d_list.append(
+                nn.Conv2d(inplanes, num_classes, kernel_size=3, stride=1, padding=padding,
+                          dilation=dilation, bias=True))
+
+        for m in self.conv2d_list:
+            m.weight.data.normal_(0, 0.01)
+
+        self.global_avg_pool = nn.Sequential(nn.AdaptiveAvgPool2d((1, 1)),
+                                             nn.Conv2d(inplanes, num_classes, 1, stride=1, bias=False),
+                                             nn.BatchNorm2d(num_classes),
+                                             nn.ReLU())
+
+    def forward(self, x):
+        out = self.conv2d_list[0](x)
+        out_gap = self.global_avg_pool(x)
+        out_gap = F.upsample(out_gap, size=out.size()[2:], mode='bilinear', align_corners=True)
+        for i in range(len(self.conv2d_list) - 1):
+            out += self.conv2d_list[i + 1](x)
+        out = out + out_gap
+        return out
+
 
 class ResNetMulti(nn.Module):
     def __init__(self, block, layers, num_classes, multi_level):
@@ -92,7 +119,9 @@ class ResNetMulti(nn.Module):
         self.layer4 = self._make_layer(block, 512, layers[3], stride=1, dilation=4)
         if self.multi_level:
             self.layer5 = ClassifierModule(1024, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
-        self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        #self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        self.layer6 = ClassifierModule_GAP(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 m.weight.data.normal_(0, 0.01)
@@ -201,7 +230,9 @@ class ResNetSingleEL(nn.Module):
         self.layer4 = self._make_layer(block, 512, layers[3], stride=1, dilation=4)
         if self.multi_level:
             self.layer5 = ClassifierModule(1024, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
-        self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        #self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        self.layer6 = ClassifierModule_GAP(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 m.weight.data.normal_(0, 0.01)
@@ -306,7 +337,9 @@ class ResNetSingleFL(nn.Module):
         self.layer4 = self._make_layer(block, 512, layers[3], stride=1, dilation=4)
         if self.multi_level:
             self.layer5 = ClassifierModule(1024, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
-        self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        #self.layer6 = ClassifierModule(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+        self.layer6 = ClassifierModule_GAP(2048, [6, 12, 18, 24], [6, 12, 18, 24], num_classes)
+
         for m in self.modules():
             if isinstance(m, nn.Conv2d):
                 m.weight.data.normal_(0, 0.01)
@@ -394,14 +427,14 @@ class ResNetSingleFL(nn.Module):
                 {'params': self.get_10x_lr_params(), 'lr': 10 * lr}]
 
 
-def get_deeplab_v2(num_classes=19, multi_level=True):
+def get_deeplab_v3(num_classes=19, multi_level=True):
     model = ResNetMulti(Bottleneck, [3, 4, 23, 3], num_classes, multi_level)
     return model
 
-def get_deeplab_v2_EL_Adapt(num_classes=19, multi_level=True):
+def get_deeplab_v3_EL_Adapt(num_classes=19, multi_level=True):
     model = ResNetSingleEL(Bottleneck, [3, 4, 23, 3], num_classes, multi_level)
     return model
 
-def get_deeplab_v2_FL_Adapt(num_classes=19, multi_level=True):
+def get_deeplab_v3_FL_Adapt(num_classes=19, multi_level=True):
     model = ResNetSingleFL(Bottleneck, [3, 4, 23, 3], num_classes, multi_level)
     return model

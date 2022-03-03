@@ -10,7 +10,7 @@ EXP_NAME: 'reproduce_PotsIRRG_Vaih'
 
 TRAIN:
   DA_METHOD: AdvEnt
-  MODEL: DeepLabv2
+  MODEL: DeepLabv3
   RESTORE_FROM: /root/code/CCDA_LFGA/PotsIRRG_source_model_13000.pth
   #--REVERSE--
   #/root/code/CCA-LGFA/on_vaih_model_13000.pth

@@ -52,12 +52,12 @@ def main():
 
     # For feature-level adaptation
     if args.status == 0:
-        from advent.model.deeplabv2 import get_deeplab_v2_FL_Adapt as get_deeplab_v2
+        from advent.model.deeplabv3 import get_deeplab_v3_FL_Adapt as get_deeplab_v3
         from advent.domain_adaptation.train_UDA_single_FL import train_domain_adaptation
 
     # For entropy-level adaptation
     if args.status == 1:
-        from advent.model.deeplabv2 import get_deeplab_v2_EL_Adapt as get_deeplab_v2
+        from advent.model.deeplabv3 import get_deeplab_v3_EL_Adapt as get_deeplab_v3
         from advent.domain_adaptation.train_UDA_single_EL import train_domain_adaptation
 
     assert args.cfg is not None, 'Missing cfg file'
@@ -100,8 +100,8 @@ def main():
 
     # LOAD SEGMENTATION NET
     assert osp.exists(cfg.TRAIN.RESTORE_FROM), f'Missing init model {cfg.TRAIN.RESTORE_FROM}'
-    if cfg.TRAIN.MODEL == 'DeepLabv2':
-        model = get_deeplab_v2(num_classes=cfg.NUM_CLASSES, multi_level=cfg.TRAIN.MULTI_LEVEL)
+    if cfg.TRAIN.MODEL == 'DeepLabv3':
+        model = get_deeplab_v3(num_classes=cfg.NUM_CLASSES, multi_level=cfg.TRAIN.MULTI_LEVEL)
         saved_state_dict = torch.load(cfg.TRAIN.RESTORE_FROM)
         if 'DeepLab_resnet_pretrained_imagenet' in cfg.TRAIN.RESTORE_FROM:
             new_params = model.state_dict().copy()

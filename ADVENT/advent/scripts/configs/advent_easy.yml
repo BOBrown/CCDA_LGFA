@@ -7,18 +7,17 @@ TARGET: Vaihingen
 DATA_LIST_TARGET: /root/code/CCDA_LGFA/CCDA/easy_split.txt
 
 NUM_WORKERS: 8
-GPU_ID: 6
+GPU_ID: 0
 EXP_NAME: 'reproduce_PotsIRRG_Vaih_EL'
 
 TRAIN:
   DA_METHOD: AdvEnt
-  MODEL: DeepLabv2
-  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/PotsIRRG_source_model_13000.pth
+  MODEL: DeepLabv3
+  RESTORE_FROM: /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_1800.pth
   # Models in different stages:
-  # /root/code/CCDA_LGFA/ADVENT/PotsIRRG_source_model_13000.pth
-  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_800.pth
-  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_1900.pth
-
+  # /root/code/CCDA_LGFA/ADVENT/pretrained_models/PotsIRRG_source_model.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_FL/model_1800.pth
+  # /root/code/CCDA_LGFA/ADVENT/experiments/snapshots/reproduce_PotsIRRG_Vaih_EL/model_2700.pth
 
   #--REVERSE--
   # Models in different stages:

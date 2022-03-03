@@ -43,12 +43,12 @@ def main(config_file, exp_suffix):
 
     # For feature-level adaptation
     if args.status == 0:
-        from advent.model.deeplabv2 import get_deeplab_v2_FL_Adapt as get_deeplab_v2
+        from advent.model.deeplabv3 import get_deeplab_v3_FL_Adapt as get_deeplab_v3
         from advent.domain_adaptation.eval_UDA_single_FL import evaluate_domain_adaptation
 
     # For entropy-level adaptation
     if args.status == 1:
-        from advent.model.deeplabv2 import get_deeplab_v2_EL_Adapt as get_deeplab_v2
+        from advent.model.deeplabv3 import get_deeplab_v3_EL_Adapt as get_deeplab_v3
         from advent.domain_adaptation.eval_UDA_single_EL import evaluate_domain_adaptation
 
     # auto-generate exp name if not specified
@@ -69,8 +69,8 @@ def main(config_file, exp_suffix):
     if cfg.TEST.MODE == 'best':
         assert n_models == 1, 'Not yet supported'
     for i in range(n_models):
-        if cfg.TEST.MODEL[i] == 'DeepLabv2':
-            model = get_deeplab_v2(num_classes=cfg.NUM_CLASSES,
+        if cfg.TEST.MODEL[i] == 'DeepLabv3':
+            model = get_deeplab_v3(num_classes=cfg.NUM_CLASSES,
                                    multi_level=cfg.TEST.MULTI_LEVEL[i])
         elif cfg.TEST.MODEL[i] == 'UNET':
             model = UNet(n_channels=3, n_classes=cfg.NUM_CLASSES, bilinear=True)
