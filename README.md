@@ -2,16 +2,12 @@
   <h1>Curriculum-style Local-to-global Adaptation for Cross-domain Remote Sensing Image Segmentation<br></h1>
 </div>
 
-<!-- <div align="center">
-  <h3><a href=></a>, <a href=></a>, <a href=></a>, <a href=></a></h3>
-</div> -->
-
 <div align="center">
-  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper] IEEE Link</a></h4>
+  <h4> <a href=https://arxiv.org/abs/2203.01539>[paper] ArXiv Link</a></h4>
 </div>
 
 <div align="center">
-  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper] ArXiv Link</a></h4>
+  <h4> <a href=https://ieeexplore.ieee.org/document/9576523>[paper] IEEE Link</a></h4>
 </div>
 
 <div align="center">
